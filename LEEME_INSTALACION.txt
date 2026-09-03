@@ -1,0 +1,22 @@
+INGENER · COTIZADOR MÓVIL PWA v1
+
+CONTENIDO
+- index.html: copia móvil del sistema maestro.
+- manifest.webmanifest: permite instalarlo como app.
+- service-worker.js: caché/offline básico.
+- icons/: iconos para Android.
+
+IMPORTANTE
+1. No sustituye ni modifica el archivo maestro original.
+2. Para instalarse como PWA debe abrirse desde HTTPS (por ejemplo un hosting web).
+3. Los datos del sistema se guardan principalmente en localStorage. Los datos quedan asociados
+   al navegador/app y al dominio donde se publique.
+4. Si cambias posteriormente de dominio, los datos locales no se migran automáticamente.
+5. Excel/PDF/OpenCV usan librerías externas; después de una primera carga con Internet,
+   el service worker intentará conservar recursos ya utilizados en caché.
+
+INSTALACIÓN EN ANDROID (DESPUÉS DE PUBLICAR)
+- Abre la dirección HTTPS en Chrome.
+- Menú ⋮ > Agregar a pantalla principal / Instalar aplicación.
+- Confirma “Instalar”.
+- Aparecerá el icono INGENER en la pantalla principal.
